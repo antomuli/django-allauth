@@ -77,8 +77,8 @@ class OAuthClient(object):
                 raise OAuthError(
                     _('Invalid response while obtaining request token'
                       ' from "%s".') % get_token_prefix(
-                          self.request_token_url)
-                    + ' Response content: %s' % response.content.decode("utf-8")
+                            self.request_token_url) +
+                    ' Response content: %s' % response.content.decode("utf-8")
                 )
             self.request_token = dict(parse_qsl(response.text))
             self.request.session['oauth_%s_request_token' % get_token_prefix(

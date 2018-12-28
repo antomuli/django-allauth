@@ -1,5 +1,7 @@
 from __future__ import absolute_import
 
+import logging
+
 from django.urls import reverse
 
 from allauth.socialaccount import providers
@@ -15,9 +17,9 @@ from allauth.socialaccount.providers.oauth.client import (
 
 from ..base import AuthAction, AuthError
 
-import logging
 
 logger = logging.getLogger(__name__)
+
 
 class OAuthAdapter(object):
 
